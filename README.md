@@ -40,7 +40,7 @@ Linux Kernel Crypto API: https://www.kernel.org/doc/html/v4.12/crypto/index.html
 
 The Linux file system: http://www.tldp.org/LDP/tlk/fs/filesystem.html
 
-Anatomy of the Linux file system: https://www.ibm.com/developerworks/library/l-linuxfilesystem/index.html
+Anatomy of the Linux file system: https://www.ibm.com/developerworks/library/l-linux-filesystem/index.html
 
 Introduction to the Minix File System: http://ohm.hgesser.de/sp-ss2012/Intro-MinixFS.pdf
 
@@ -56,7 +56,7 @@ através de imagens e textos descrevendo o que está sendo testado e os resultad
 esperados e obtidos;
 • Conclusão indicando o que foi aprendido com o experimento.
 
-# Entrega
+# -Entrega-
 A entrega do projeto deve ser feita em seu escaninho no AVA, em uma pasta com o nome
 “Projeto2”, de acordo com o cronograma previamente estabelecido.
 Em todos os arquivos entregues deve constar OBRIGATORIAMENTE o nome e o RA dos
