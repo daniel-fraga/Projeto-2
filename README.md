@@ -1,5 +1,4 @@
-# Projeto 2 
-# Sistemas Operacionais B
+# Projeto 2 - Sistemas Operacionais B
 
 # 1. Introdução
 Este projeto deverá permitir ao aluno familiarizar-se com os detalhes de implementação de um
