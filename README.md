@@ -1,13 +1,13 @@
-# Projeto 2 
-Sistemas Operacionais B
-Projeto #2
-1. Introdução
+# Projeto 2 - Sistemas Operacionais B
+
+# 1. Introdução
 Este projeto deverá permitir ao aluno familiarizar-se com os detalhes de implementação de um
 sistema de arquivos minix cifrado que faz uso da API criptográfica do kernel Linux. Espera-se que
 ao final do projeto, cada aluno seja capaz de implementar, compilar, instalar e testar um novo
 módulo de kernel que permita ao usuário montar um sistema de arquivos minix em seu sistema
 Linux e armazenar arquivos de forma cifrada.
-2. Descrição do projeto
+
+# 2. Descrição do projeto
 O projeto consiste em modificar o módulo de kernel que implementa o sistema de arquivos minix
 em sistemas operacionais Linux, de forma que os arquivos dos usuários sejam armazenados de
 maneira cifrada.
@@ -34,12 +34,14 @@ modificado deve ser descarregado e o módulo minix original presente no kernel (
 modificações) deve ser carregado. Neste caso, o conteúdo dos arquivos ainda estará acessível
 aos programas de usuário, mas será diferente do conteúdo originalmente armazenado, pelo fato
 de não ter sido realizada a decifragem do dados.
-3. Material complementar
+
+# 3. Material complementar
 Linux Kernel Crypto API: https://www.kernel.org/doc/html/v4.12/crypto/index.html
 The Linux file system: http://www.tldp.org/LDP/tlk/fs/filesystem.html
 Anatomy of the Linux file system: https://www.ibm.com/developerworks/library/l-linuxfilesystem/index.html
 Introduction to the Minix File System: http://ohm.hgesser.de/sp-ss2012/Intro-MinixFS.pdf
-4. Resultado
+
+# 4. Resultado
 O projeto deve ser acompanhado de um relatório com as seguintes partes obrigatórias:
 • Introdução, indicando o que se pretende com o experimento;
 • Detalhes de projeto do módulo de kernel desenvolvido, detalhando através de textos e
@@ -50,7 +52,8 @@ do módulo de kernel desenvolvido, demonstrando as funcionalidades implementadas
 através de imagens e textos descrevendo o que está sendo testado e os resultados
 esperados e obtidos;
 • Conclusão indicando o que foi aprendido com o experimento.
-Entrega
+
+# Entrega
 A entrega do projeto deve ser feita em seu escaninho no AVA, em uma pasta com o nome
 “Projeto2”, de acordo com o cronograma previamente estabelecido.
 Em todos os arquivos entregues deve constar OBRIGATORIAMENTE o nome e o RA dos
