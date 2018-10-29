@@ -37,8 +37,11 @@ de não ter sido realizada a decifragem do dados.
 
 # 3. Material complementar
 Linux Kernel Crypto API: https://www.kernel.org/doc/html/v4.12/crypto/index.html
+
 The Linux file system: http://www.tldp.org/LDP/tlk/fs/filesystem.html
+
 Anatomy of the Linux file system: https://www.ibm.com/developerworks/library/l-linuxfilesystem/index.html
+
 Introduction to the Minix File System: http://ohm.hgesser.de/sp-ss2012/Intro-MinixFS.pdf
 
 # 4. Resultado
