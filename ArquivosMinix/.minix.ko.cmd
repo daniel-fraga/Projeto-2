@@ -1,0 +1,1 @@
+cmd_/home/so/Desktop/ArquivosMinix/minix.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/so/Desktop/ArquivosMinix/minix.ko /home/so/Desktop/ArquivosMinix/minix.o /home/so/Desktop/ArquivosMinix/minix.mod.o ;  true
