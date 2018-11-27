@@ -20,9 +20,10 @@
  * the minix filesystem.
  */
  
-//static char *key;
-//module_param(key,charp,0000);
-static char *key = "123456789ABCDEF";
+static char *key;
+module_param(key,charp,0000);
+
+//static char *key = "123456789ABCDEF";
 static ssize_t readFile (struct kiocb *iocb, struct iov_iter *iter);
 static ssize_t writeFile (struct kiocb *iocb, struct iov_iter *from);
 static int preRW (int i);
@@ -58,9 +59,8 @@ static int preRW(int i)
 //funcao para descriptografar
 static ssize_t readFile (struct kiocb *iocb, struct iov_iter *iter)
 {
-	char converted[64];
 	ssize_t ret;
-	int i,j;
+	int i;
 	char *ptr = (char*) iter->kvec->iov_base;
 
 	printk("Entrou no read");
@@ -70,14 +70,8 @@ static ssize_t readFile (struct kiocb *iocb, struct iov_iter *iter)
 
 	
 	preRW(1);
-	for(i=0;i<strlen(ptr);i++)
-	{
-		sprintf(&converted[i*2], "%02hhx", (unsigned char)ptr[i]);
-		j = i;
-	}
-	converted[(j+1)*2] = '\0';
 	
-	crypto_cipher_decrypt_one(cryptoCipher,descriptografado,converted);
+	crypto_cipher_decrypt_one(cryptoCipher,descriptografado,ptr);
 	printk(KERN_INFO "cryptodevice: descriptografado na leitura: %s", descriptografado);
 	
 	for(i=0;i<strlen(descriptografado);i++)	
@@ -97,11 +91,9 @@ static ssize_t writeFile (struct kiocb *iocb, struct iov_iter *from)
 {
 	
 	ssize_t ret;
-	int i,j;
+	int i;
 	char *ptr = (char*) from->kvec->iov_base;
-	char converted[64];
 	printk("Entrou no write");
-	
 	
 	preRW(1);
 	printk("PTR antes de criptografar:%s", ptr);
@@ -113,14 +105,7 @@ static ssize_t writeFile (struct kiocb *iocb, struct iov_iter *from)
 	}
 	
 	
-	for(i=0;i<sizeof(criptografado);i++)
-	{
-		sprintf(&converted[i*2], "%02hhx", criptografado[i]);
-		j =i;
-	}
-	converted[(j+1)*2] = '\0';
-	
-	//memcpy(ptr,converted,sizeof(converted));
+	memcpy(ptr,criptografado,sizeof(criptografado));
 	
 	printk("ptr depois de criptografar:%s", ptr);
 	
@@ -133,6 +118,7 @@ static ssize_t writeFile (struct kiocb *iocb, struct iov_iter *from)
 
 static int minix_setattr(struct dentry *dentry, struct iattr *attr)
 {
+	
 	struct inode *inode = d_inode(dentry);
 	int error;
 
